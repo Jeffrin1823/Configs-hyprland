@@ -1,1 +1,1 @@
-# Configs-hyprland
+# EM BREVE NOVAS CONFIGS :D
