@@ -1,0 +1,168 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "type": "auto",
+    "padding": {
+      "top": 1,
+      "left": 1,
+      "right": 3
+    },
+    "printRemaining": true,
+    "color": {
+      "1": "38;2;80;95;160",
+      "2": "38;2;50;60;120",
+      "3": "38;2;25;30;60"
+    }
+  },
+  "display": {
+    "stat": false,
+    "pipe": false,
+    "showErrors": false,
+    "disableLinewrap": true,
+    "hideCursor": false,
+    "separator": " :: ",
+    "color": {
+      "keys": "38;2;40;50;95",
+      "title": "38;2;80;95;160",
+      "output": "38;2;60;70;130",
+      "separator": "38;2;25;30;60"
+    },
+    "brightColor": false,
+    "duration": {
+      "abbreviation": true,
+      "spaceBeforeUnit": "default"
+    },
+    "size": {
+      "maxPrefix": "TB",
+      "binaryPrefix": "iec",
+      "ndigits": 2,
+      "spaceBeforeUnit": "default"
+    },
+    "temp": {
+      "unit": "D",
+      "ndigits": 1,
+      "color": {
+        "green": "38;2;120;140;180",
+        "yellow": "38;2;170;170;140",
+        "red": "38;2;190;120;140"
+      },
+      "spaceBeforeUnit": "default"
+    },
+    "percent": {
+      "type": [
+        "num",
+        "num-color"
+      ],
+      "ndigits": 0,
+      "color": {
+        "green": "38;2;120;140;180",
+        "yellow": "38;2;170;170;140",
+        "red": "38;2;190;120;140"
+      },
+      "spaceBeforeUnit": "default",
+      "width": 0
+    },
+    "bar": {
+      "char": {
+        "elapsed": "■",
+        "total": "-"
+      },
+      "border": {
+        "left": "[",
+        "right": "]",
+        "leftElapsed": "",
+        "rightElapsed": ""
+      },
+      "color": {
+        "elapsed": "38;2;130;130;170",
+        "total": "38;2;60;60;80",
+        "border": "38;2;90;90;120"
+      },
+      "width": 10
+    },
+    "fraction": {
+      "ndigits": 2
+    },
+    "noBuffer": false,
+    "key": {
+      "width": 22,
+      "type": "string",
+      "paddingLeft": 0
+    },
+    "freq": {
+      "ndigits": 2,
+      "spaceBeforeUnit": "default"
+    },
+    "constants": []
+  },
+  "general": {
+    "thread": true,
+    "processingTimeout": 5000,
+    "detectVersion": true
+  },
+  "modules": [
+    {
+      "type": "os",
+      "key": "SYSTEM_LAYER        "
+    },
+    {
+      "type": "kernel",
+      "key": "KERNEL_INTERFACE    "
+    },
+    {
+      "type": "cpu",
+      "key": "CORE_PROCESS_UNIT   ",
+      "temp": false,
+      "showPeCoreCount": false
+    },
+    {
+      "type": "gpu",
+      "key": "GRAPHICS_NODE       ",
+      "driverSpecific": false,
+      "detectionMethod": "pci",
+      "temp": false,
+      "hideType": "none"
+    },
+    {
+      "type": "memory",
+      "key": "MEMORY_ALLOCATION   "
+    },
+    {
+      "type": "disk",
+      "key": "SYSYEM_CLUSTER      ",
+      "showRegular": true,
+      "showExternal": false,
+      "showHidden": false,
+      "showSubvolumes": false,
+      "showReadOnly": true,
+      "showUnknown": false,
+      "folders": "/",
+      "hideFolders": "/efi:/boot:/boot/*",
+      "hideFS": "",
+      "useAvailable": false
+    },
+    {
+      "type": "disk",
+      "key": "STORAGE_CLUSTER     ",
+      "showRegular": true,
+      "showExternal": false,
+      "showHidden": false,
+      "showSubvolumes": false,
+      "showReadOnly": true,
+      "showUnknown": false,
+      "folders": "/home",
+      "hideFolders": "/efi:/boot:/boot/*",
+      "hideFS": "",
+      "useAvailable": false
+    },
+    {
+      "type": "break"
+    },
+    {
+      "type": "CUSTOM",
+      "key": "WIRED_SIGNAL        ",
+      "format": "no matter where you go, everyone is connected",
+      "outputColor": "38;2;60;70;175"
+    }
+  ]
+}
